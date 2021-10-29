@@ -2,37 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
 
 *{ 
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body{display: flex;
-    align-items: center;
+body {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
     background-color: hsl(0, 0%, 95%);
     font-size: 15px;
     
 }
 
 .container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 60px;
     min-width: 960px;
+    margin: 0 auto;
+    
 }
 
 .card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     border-radius: 15px;
+    margin: 1.5rem;
     overflow: hidden;
 }
 
 .box {
-    padding: 30px;
+    padding: 40px;
 }
 .box h1{
     font-family: Big Shoulders Display, sans-serif;
@@ -50,12 +47,10 @@ body{display: flex;
 }
 
 .box a{
+    display: inline-block;
     font-family: Lexend Deca, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: hsl(31, 77%, 52%);
     text-decoration: none;
-    background-color: white;
+    background-color: hsl(0, 0%, 95%);
     margin-top: 80px;
     display: inline-block;
     padding: 15px 25px;
@@ -65,6 +60,10 @@ body{display: flex;
 .box a:hover{
     color: hsl(0, 0%, 95%);
     background: transparent;
+}
+
+.box_1 a{
+    color: hsl(31, 77%, 52%);
 }
 
 .box_2 a{
@@ -87,11 +86,9 @@ body{display: flex;
     background-color: hsl(179, 100%, 13%);
 }   
 
-@media only screen and (max-width:750px){
+@media only screen and (max-width:860px){
     .card{
-        display: flex;
-        flex-direction: column;
-        columns: 1px;
+        grid-template-columns: 1fr;
     }
 
 }
